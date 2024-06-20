@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website with Bootstrap and JavaScript</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Brand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#api-data">API Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 id="home" class="display-4">Welcome to Our Website</h1>
+                <p class="lead">This is a responsive website layout using Bootstrap.</p>
+                <a href="#about" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="about">
+            <div class="col-lg-6">
+                <h2>About Us</h2>
+                <p>We are a team of passionate developers dedicated to creating beautiful and functional websites.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="About Us">
+            </div>
+        </div>
+
+        <div class="row mt-5" id="services">
+            <div class="col-lg-12">
+                <h2>Our Services</h2>
+                <!-- Tabs Navigation -->
+                <ul class="nav nav-tabs" id="servicesTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="web-design-tab" data-toggle="tab" href="#web-design" role="tab" aria-controls="web-design" aria-selected="true">Web Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="web-development-tab" data-toggle="tab" href="#web-development" role="tab" aria-controls="web-development" aria-selected="false">Web Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="seo-optimization-tab" data-toggle="tab" href="#seo-optimization" role="tab" aria-controls="seo-optimization" aria-selected="false">SEO Optimization</a>
+                    </li>
+                </ul>
+                <!-- Tabs Content -->
+                <div class="tab-content" id="servicesTabContent">
+                    <div class="tab-pane fade show active" id="web-design" role="tabpanel" aria-labelledby="web-design-tab">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Web Design</h5>
+                                <p class="card-text">We create stunning web designs that captivate your audience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="web-development" role="tabpanel" aria-labelledby="web-development-tab">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Web Development</h5>
+                                <p class="card-text">Our team develops high-quality websites that meet your business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="seo-optimization" role="tabpanel" aria-labelledby="seo-optimization-tab">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">SEO Optimization</h5>
+                                <p class="card-text">We optimize your website to rank higher in search engine results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="contact">
+            <div class="col-lg-12">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
+                            <div class="invalid-feedback">
+                                Please enter your password.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+                        <div class="invalid-feedback">
+                            Please enter your address.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                            <div class="invalid-feedback">
+                                Please enter your city.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control" required>
+                                <option value="">Choose...</option>
+                                <option>State 1</option>
+                                <option>State 2</option>
+                                <option>State 3</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select your state.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip" required>
+                            <div class="invalid-feedback">
+                                Please enter your zip code.
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="api-data">
+            <div class="col-lg-12">
+                <h2>API Data</h2>
+                <button id="fetchDataBtn" class="btn btn-secondary">Fetch Data</button>
+                <div id="apiDataContent" class="mt-3">
+                    <!-- API data will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Responsive Website with Bootstrap and JavaScript. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
